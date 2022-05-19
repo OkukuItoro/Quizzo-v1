@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/Quizzo-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Poppins:wght@500;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div id="quizz-container">
+      <div id="loader"></div>
+      <div id="quiz-body" class="hidden">
+        <div class="head-text">
+          <h2 class="question-number" id="questionCounter">Question 1/20</h2>
+          <div class="user-score">
+            <h2 class="score">Score:</h2>
+            <h2 class="score-text">0</h2>
+          </div>
+        </div>
+        <div><h3 class="question-correct-answer"></h3></div>
+        <h2 id="question"></h2>
+        <div class="choice-container">
+          <p class="choice-prefix">A</p>
+          <p class="choice-text" data-number="1"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">B</p>
+          <p class="choice-text" data-number="2"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">C</p>
+          <p class="choice-text" data-number="3"></p>
+        </div>
+        <div class="choice-container">
+          <p class="choice-prefix">D</p>
+          <p class="choice-text" data-number="4"></p>
+        </div>
+
+        <div class="navigate-buttons">
+          <div class="btn-quiz submit-button-container">
+            <button class="btn submit-button" disabled>Submit</button>
+          </div>
+          <div class="btn-quiz next-button-container">
+            <button class="btn next-button" disabled>Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/quiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/Quizzo-icon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Poppins:wght@500;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>🎉 Congrats</title>
+  </head>
+  <body>
+    <div id="app-container">
+      <div class="results-body">
+        <h3 class="final-text">Your Final Score</h3>
+        <h1 id="final-score"></h1>
+        <div class="save-score">
+          <form class="results-form" action="">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="username"
+            />
+            <button
+              type="submit"
+              id="saveScoreBtn"
+              class="btn"
+              onclick="saveHighScore(event)"
+              disabled
+            >
+              Save Score
+            </button>
+          </form>
+
+          <div class="app-buttons">
+            <div class="btn-result play-again-button">
+              <a href="/html/quizz.html">
+                <button type="button" class="btn">Play Again</button>
+              </a>
+            </div>
+            <div class="btn-result return-home">
+              <a href="/html/app.html">
+                <button type="button" class="btn">Home</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/results.js"></script>
+  </body>
+</html>

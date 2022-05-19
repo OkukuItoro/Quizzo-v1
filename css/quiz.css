@@ -1,0 +1,324 @@
+:root {
+  --primary-color: #181818;
+  --secondary-color: #282828;
+  --complementary-color: #4494b6;
+  --button-color: #198e19;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--primary-color);
+}
+
+h1 h2 h3 h4 h5 h6 p div {
+  padding: 0;
+  margin: 0;
+}
+
+/* GLOBAL STYLES*/
+#app-container {
+  text-align: center;
+  padding: 4rem 10rem;
+}
+
+#app-container img {
+  height: 180px;
+  width: 200px;
+}
+
+.btn {
+  height: 50px;
+  width: 200px;
+  background: var(--complementary-color);
+  color: #fff;
+  font-size: 1.5rem;
+  outline: auto;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 1.4rem white;
+          box-shadow: 1.4rem white;
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-transition: -webkit-transform 154ms;
+  transition: -webkit-transform 154ms;
+  transition: transform 154ms;
+  transition: transform 154ms, -webkit-transform 154ms;
+}
+
+.btn:active {
+  -webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* APPLICATION RESULT PAGE */
+.app-buttons {
+  margin: 1.5rem 0;
+}
+
+.app-buttons .start-button {
+  margin: 2rem 0;
+}
+
+/* CATEGORIES PAGE */
+.categories form select,
+.categories form option {
+  height: 50px;
+  width: 400px;
+  color: var(--secondary-color);
+  border-radius: 3px;
+  font-size: 1.1rem;
+}
+
+.categories form option {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.categories form button {
+  margin: 3rem 0;
+}
+
+/* QUIZ PAGE */
+#quizz-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-left: 8rem;
+}
+
+#quizz-container #quiz-body {
+  display: inline-block;
+  text-align: left;
+}
+
+#quizz-container #quiz-body p {
+  margin: 0;
+}
+
+#quizz-container #quiz-body .head-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#quizz-container #quiz-body .question-number {
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+#quizz-container #quiz-body .user-score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+#quizz-container #quiz-body .user-score .score-text {
+  padding-left: 1rem;
+}
+
+#quizz-container #quiz-body .question {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  width: 60%;
+}
+
+#quizz-container #quiz-body .choice-container:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem);
+  -webkit-transition: -webkit-transform 154ms;
+  transition: -webkit-transform 154ms;
+  transition: transform 154ms;
+  transition: transform 154ms, -webkit-transform 154ms;
+}
+
+#quizz-container #quiz-body .choice-container {
+  padding: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+  width: 600px;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  border: 0.2rem solid var(--complementary-color);
+  background-color: var(--primary-color);
+}
+
+#quizz-container #quiz-body .choice-container .choice-prefix {
+  padding: 1.5rem;
+  background-color: var(--complementary-color);
+  color: white;
+}
+
+#quizz-container #quiz-body .choice-container .choice-text {
+  padding: 1.4rem 1rem;
+  width: 100%;
+}
+
+#quizz-container #quiz-body .navigate-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#quizz-container #quiz-body .navigate-buttons .submit-button-container {
+  padding-right: 1rem;
+}
+
+#quizz-container #quiz-body .selected-answer {
+  background-color: white;
+}
+
+#quizz-container #quiz-body .selected-answer .choice-text {
+  color: var(--complementary-color);
+}
+
+#quizz-container #quiz-body .correct {
+  background-color: #198e19;
+}
+
+#quizz-container #quiz-body .incorrect {
+  background-color: #dc3545;
+}
+
+.disable-options {
+  pointer-events: "none";
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* RESULTS PAGE */
+.results-body {
+  display: inline-block;
+  text-align: center;
+  padding: 1rem;
+}
+
+.results-body h1 {
+  font-size: 4rem;
+}
+
+.results-body .final-text {
+  font-size: 2rem;
+}
+
+.results-body form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results-body form input {
+  margin-bottom: 1rem;
+  height: 3rem;
+  width: 20rem;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: solid var(--complementary-color);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0.1rem 1.4rem 0 rgba(96, 97, 97, 0.5);
+          box-shadow: 0 0.1rem 1.4rem 0 rgba(96, 97, 97, 0.5);
+  color: var(--primary-color);
+}
+
+.results-body form input::-webkit-input-placeholder {
+  color: #4a4949;
+}
+
+.results-body form input:-ms-input-placeholder {
+  color: #4a4949;
+}
+
+.results-body form input::-ms-input-placeholder {
+  color: #4a4949;
+}
+
+.results-body form input::placeholder {
+  color: #4a4949;
+}
+
+.results-body .btn-result {
+  margin: 1rem;
+}
+
+.results-body .app-buttons {
+  margin-top: 4rem;
+}
+
+/* LOADER */
+#loader {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  border: 1.6rem solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid var(--complementary-color);
+  width: 12rem;
+  height: 12rem;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=quiz.css.map */

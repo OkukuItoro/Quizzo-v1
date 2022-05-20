@@ -10,8 +10,11 @@ console.log(MAX_QUESTIONS);
 
 const MAX_HIGHSCORE = 5;
 
-username.addEventListener("keypress", () => {
-  saveScoreBtn.disabled = !username.value;
+username.addEventListener("key", () => {
+  // saveScoreBtn.disabled = !username.value;
+  if (!username.value) {
+    saveScoreBtn.disabled = false;
+  }
 });
 
 const saveHighScore = function (e) {
@@ -28,5 +31,5 @@ const saveHighScore = function (e) {
   highScores.splice(5);
 
   localStorage.setItem("highScores", JSON.stringify(highScores));
-  window.location.assign("/app.html");
+  window.location.assign("index.html");
 };

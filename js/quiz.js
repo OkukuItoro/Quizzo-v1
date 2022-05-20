@@ -68,7 +68,7 @@ const getNewQuestion = function () {
     localStorage.setItem("recentScore", score);
 
     // go to the results page
-    return window.location.assign("/html/results.html");
+    return window.location.assign("results.html");
   }
   questionCounter++;
   questionCounterText.innerHTML = `Question ${questionCounter}/${MAX_QUESTIONS}`;

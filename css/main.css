@@ -135,7 +135,7 @@ nav {
 /* GLOBAL STYLES*/
 #app-container {
   text-align: center;
-  padding: 4rem 10rem;
+  padding: auto;
 }
 
 #app-container img {
@@ -219,13 +219,15 @@ nav {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-left: 8rem;
-  margin-right: 3rem;
+  margin: 1rem 2rem;
+  padding: auto;
 }
 
 #quizz-container #quiz-body {
   display: inline-block;
   text-align: left;
+  padding: auto;
+  margin: auto;
 }
 
 #quizz-container #quiz-body p {
@@ -242,7 +244,7 @@ nav {
 }
 
 #quizz-container #quiz-body .question-number {
-  padding: 1rem 0;
+  padding: 1rem auto;
   margin-bottom: 1rem;
 }
 
@@ -250,7 +252,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 1rem 0;
+  padding: 1rem auto;
   margin-bottom: 1rem;
 }
 
@@ -259,9 +261,9 @@ nav {
 }
 
 #quizz-container #quiz-body .question {
-  padding: 1rem;
+  padding: auto;
   margin-bottom: 2rem;
-  width: 60%;
+  width: auto;
 }
 
 #quizz-container #quiz-body .choice-container:hover {
@@ -279,16 +281,15 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 70px;
-  width: 600px;
+  width: auto;
   margin-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   border: 0.2rem solid var(--complementary-color);
   background-color: var(--primary-color);
 }
 
 #quizz-container #quiz-body .choice-container .choice-prefix {
-  padding: 1.5rem;
+  padding: 1.2rem;
   background-color: var(--complementary-color);
   color: white;
 }
@@ -336,11 +337,12 @@ nav {
 .results-body {
   display: inline-block;
   text-align: center;
-  padding: 1rem;
+  padding: auto;
+  margin: auto;
 }
 
 .results-body h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .results-body .final-text {
@@ -363,8 +365,7 @@ nav {
 
 .results-body form input {
   margin-bottom: 1rem;
-  height: 3rem;
-  width: 20rem;
+  width: auto;
   padding: 1.5rem;
   font-size: 1.8rem;
   border: solid var(--complementary-color);
@@ -395,7 +396,7 @@ nav {
 }
 
 .results-body .app-buttons {
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 
 /* LOADER */

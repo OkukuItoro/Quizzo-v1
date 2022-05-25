@@ -1,10 +1,16 @@
 const username = document.getElementById("username");
 const saveScoreBtn = document.getElementById("saveScoreBtn");
+const scoreAlert = document.querySelector(".final-text");
 const finalScore = document.getElementById("final-score");
 const recentScore = localStorage.getItem("recentScore");
 
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 finalScore.innerText = recentScore;
+
+const toNum = Number(recentScore);
+scoreAlert.innerHTML = `${
+  toNum > 0 && toNum > toNum ? "Congrats, New High Score🎉" : "Your Final Score"
+}`;
 
 const MAX_HIGHSCORE = 5;
 

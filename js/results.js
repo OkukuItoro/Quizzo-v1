@@ -6,14 +6,12 @@ const recentScore = localStorage.getItem("recentScore");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 finalScore.innerText = recentScore;
 
-console.log(MAX_QUESTIONS);
-
 const MAX_HIGHSCORE = 5;
 
-username.addEventListener("key", () => {
+username.addEventListener("keypress", () => {
   // saveScoreBtn.disabled = !username.value;
   if (!username.value) {
-    saveScoreBtn.disabled = false;
+    return "user";
   }
 });
 

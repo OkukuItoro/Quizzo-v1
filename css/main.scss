@@ -176,7 +176,7 @@ nav {
 #quizz-container {
   display: flex;
   position: relative;
-  margin: 1rem 2rem;
+  margin: 1rem 3rem;
   padding: auto;
   #quiz-body {
     display: inline-block;
@@ -200,7 +200,7 @@ nav {
 
     .user-score {
       display: flex;
-      padding: 1rem auto;
+      padding: 1rem 2rem;
       margin-bottom: 1rem;
 
       .score-text {
@@ -297,7 +297,7 @@ nav {
 
     input {
       margin-bottom: 1rem;
-      width: auto;
+      width: 100%;
       padding: 1.5rem;
       font-size: 1.8rem;
       border: solid var(--complementary-color);

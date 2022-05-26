@@ -263,7 +263,7 @@ nav {
 #quizz-container #quiz-body .question {
   padding: auto;
   margin-bottom: 2rem;
-  width: auto;
+  width: 75%;
 }
 
 #quizz-container #quiz-body .choice-container:hover {
@@ -281,8 +281,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
   margin-bottom: 2rem;
+  width: 65%;
   font-size: 1.2rem;
   border: 0.2rem solid var(--complementary-color);
   background-color: var(--primary-color);

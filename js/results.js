@@ -8,17 +8,20 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 finalScore.innerText = recentScore;
 
 const toNum = Number(recentScore);
-scoreAlert.innerHTML = `${
-  toNum > 0 && toNum > toNum ? "Congrats, New High Score🎉" : "Your Final Score"
-}`;
+
+highScores.forEach((userScore) => {
+  if (toNum > Number(userScore.score)) {
+    scoreAlert.innerHTML = "Congrats, New High Score🎉";
+  } else scoreAlert.innerHTML = "Your Final Score";
+});
 
 const MAX_HIGHSCORE = 5;
 
 username.addEventListener("keypress", () => {
   // saveScoreBtn.disabled = !username.value;
   if (!username.value) {
-    return "user";
-  }
+    saveScoreBtn.disabled = true;
+  } else saveScoreBtn.disabled = false;
 });
 
 const saveHighScore = function (e) {

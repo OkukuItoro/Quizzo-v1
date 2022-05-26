@@ -119,6 +119,7 @@ nav {
   font-size: 1.5rem;
   outline: auto;
   border: none;
+  margin-right: 2rem;
   border-radius: 4px;
   cursor: pointer;
   user-select: none;
@@ -194,6 +195,8 @@ nav {
     }
 
     .question-number {
+      display: flex;
+      align-items: center;
       padding: 1rem auto;
       margin-bottom: 1rem;
     }

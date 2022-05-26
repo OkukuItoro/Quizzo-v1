@@ -151,6 +151,7 @@ nav {
   font-size: 1.5rem;
   outline: auto;
   border: none;
+  margin-right: 2rem;
   border-radius: 4px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -244,6 +245,12 @@ nav {
 }
 
 #quizz-container #quiz-body .question-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1rem auto;
   margin-bottom: 1rem;
 }

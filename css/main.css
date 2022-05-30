@@ -441,4 +441,9 @@ nav {
             transform: rotate(360deg);
   }
 }
+
+/* DISABLE EFFECT*/
+.disable {
+  pointer-events: none;
+}
 /*# sourceMappingURL=main.css.map */

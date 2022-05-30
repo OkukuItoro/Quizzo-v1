@@ -22,12 +22,13 @@ let questions = [];
 let score = 0;
 let userAnswer;
 
+console.log("Welcome to Quizzo v1");
+
 //CONSTANTS
 const MAX_QUESTIONS = 20;
 
 /** FUNCTION TO CALL AND GET DATA FROM API */
 const getQuizData = async function () {
-  // User input from the categories.html
   const data = await fetch(
     "https://opentdb.com/api.php?amount=20&category=9&difficulty=medium&type=multiple"
   );
@@ -35,7 +36,7 @@ const getQuizData = async function () {
   const quizzData = await data.json();
 
   const questionObjects = quizzData.results;
-  console.log(questionObjects);
+  console.log("Questions Recieved");
 
   questionObjects.forEach((questionData) => {
     const question = questionData.question;
@@ -45,7 +46,6 @@ const getQuizData = async function () {
     questionItem = { question, answer, incorrectAnswers, quizOptions };
     questions.push(questionItem);
   });
-  console.log(questions);
 };
 
 /** FUNCTION TO START THE QUIZ WITH THE FETCHED QUIZ DATA
@@ -93,7 +93,7 @@ const getNewQuestion = function () {
   availableQuestions.splice(questionIndex, 1);
 };
 
-//Enable users click options
+//Enable users to click options
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     userAnswer = e.target;
@@ -107,7 +107,6 @@ choices.forEach((choice) => {
     userAnswer.parentElement.classList.add("selected-answer");
 
     submitButton.disabled = false;
-    // nextButton.disabled = false;
   });
 });
 
@@ -116,13 +115,17 @@ submitButton.addEventListener("click", () => {
   validateUserAnswer(userAnswer);
   userAnswer.parentElement.classList.remove("selected-answer");
   submitButton.disabled = true;
+  nextButton.disabled = false;
+
+  choices.forEach((choice) => {
+    choice.classList.add("disable");
+  });
 });
 
-setTimeout(() => {
-  disableOptions();
-}, 1000);
-
 nextButton.addEventListener("click", () => {
+  if ((submitButton.disabled = true)) {
+    nextButton.disabled = true;
+  }
   removeClasses(userAnswer);
   getNewQuestion();
 });
@@ -156,10 +159,12 @@ const removeClasses = function (answer) {
   answer.parentElement.classList.remove("selected-answer");
   answer.parentElement.classList.remove("correct");
   answer.parentElement.classList.remove("incorrect");
+  answer.classList.remove("disable");
   choices.forEach((choice) => {
     choice.parentElement.classList.remove("selected-answer");
     choice.parentElement.classList.remove("correct");
     choice.parentElement.classList.remove("incorrect");
+    choice.classList.remove("disable");
   });
 };
 
